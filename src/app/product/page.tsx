@@ -1,5 +1,9 @@
-export const metadata = {
-  title: "Product List",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Product List",
+  },
 };
 export default function ProductList() {
   return (
