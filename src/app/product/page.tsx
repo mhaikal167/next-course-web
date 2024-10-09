@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "Product List",
+};
 export default function ProductList() {
   return (
     <>
