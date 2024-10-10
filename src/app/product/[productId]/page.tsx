@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import ClientProductDetail from "./client";
 
 type ProductProps = {
   params: {
@@ -24,5 +25,10 @@ export default function ProductDetails({ params }: ProductProps) {
   if (parseInt(params.productId) > 1000) {
     notFound();
   }
-  return <h1>Details of product {params.productId}</h1>;
+
+  return (
+    <div className="px-4 py-4">
+      <ClientProductDetail params={params} />
+    </div>
+  );
 }
