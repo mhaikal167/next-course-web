@@ -6,6 +6,10 @@ type ProductProps = {
     productId: string;
   };
 };
+
+function getRandomInt(count: number) {
+  return Math.floor(Math.random() * count);
+}
 export default function ClientProductDetail({ params }: ProductProps) {
   const router = useRouter();
 
@@ -15,6 +19,10 @@ export default function ClientProductDetail({ params }: ProductProps) {
       router.replace("/");
     }, 1000);
   };
+  const random = getRandomInt(2);
+  if (random === 1) {
+    throw new Error("Error viewing product detail");
+  }
   return (
     <div>
       <h1>Details of product {params.productId}</h1>

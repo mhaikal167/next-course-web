@@ -18,6 +18,7 @@ export default function ReviewsDetail({ params }: ReviewsDetailProps) {
   if (parseInt(productId) > 1000 || parseInt(reviewsId) > 1000) {
     notFound();
   }
+
   return (
     <h1>
       Reviews {reviewsId} of product {productId}
